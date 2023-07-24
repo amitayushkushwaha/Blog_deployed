@@ -1,5 +1,3 @@
-require("dotenv").config();
-
 //Core
 const express = require("express");
 const app = express();
@@ -121,6 +119,6 @@ mongoose
     console.error(err);
   });
 
-app.listen(4000, () => {
+app.listen( process.env.PORT || 4000, () => {
   console.log("http://localhost:4000");
 });
