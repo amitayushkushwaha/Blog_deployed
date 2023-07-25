@@ -84,6 +84,7 @@ app.post("/api/post", uploadMiddleware.single("file"), async (req, res) => {
     summary,
     cover: newPath,
   });
+  console.log(newPath);
   res.json(postDoc);
 });
 
